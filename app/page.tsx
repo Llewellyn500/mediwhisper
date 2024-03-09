@@ -14,8 +14,8 @@ const Home = () => {
           height={37}
           priority
         />
-        <h1 className="text-center font-black text-4xl mb-3">MediWhisper - Patient Use</h1>
-        <p className="text-center mb-5">This App is meant for patients to use.</p>
+        <h1 className="text-center font-black text-4xl mb-3">MediWhisper</h1>
+        <p className="text-center mb-5">Whispers of what might be ailing you.</p>
         <Form />
       </div>
     </main>

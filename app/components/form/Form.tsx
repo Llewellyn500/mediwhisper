@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { useRef } from 'react';
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -12,14 +13,18 @@ const Form = () => {
   const [symptoms, setSymptoms] = useState("");
   const [response, setResponse] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const responseRef = useRef<HTMLDivElement>(null);
 
   const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
+    if (responseRef.current) {
+      responseRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsLoading(true);
     const options = {
       method: 'POST',
       body: JSON.stringify({
-        message: `You are a medical professional giving me possible sicknesses that i might have, you are to give me details of what i'm experiencing based of the information i gave you, These are the details: "My name is ${name}, I am ${age} years old, I weigh ${weight} kg and I'm ${height} cm tall. My symptoms are: ${symptoms}"`,
+        message: `You are a medical professional giving me possible sicknesses that i might have, you are to give me details of what i'm experiencing based of the information i gave, These are the details: "My name is ${name}, I am ${age} years old, I weigh ${weight} kg and I'm ${height} cm tall. My symptoms are: ${symptoms}"`,
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -34,7 +39,7 @@ const Form = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='mb-20'>
         <input
           type="text"
           value={name}
@@ -80,13 +85,15 @@ const Form = () => {
 
         <button type="submit">Submit</button>
       </form>
+      <div ref={responseRef}>
       {isLoading ? <p>Loading...</p> : response && (
-      <>
+        <>
         <ReactMarkdown children={response} />
         <p>It is advisable you contact a Medical professional for further enquiries and prescriptions.</p>
         <button onClick={() => { /* handle contact professional action here */ }}>Contact Professional</button>
-      </>
+        </>
     )}
+    </div>
     </div>
   );
 }
