@@ -34,7 +34,7 @@ yarn dev
 bun dev
 ```
 
-open a new terminal instance and 
+You can modify the backend file (server.js) and
 **Run the Backend server:**
 
 ```bash
@@ -44,6 +44,8 @@ yarn backend
 # or
 bun backend
 ```
+
+**Note:** Using Next.js Serverless functions so "Server.js" file is not needed anymore, but it's kept for reference and dev purposes.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
