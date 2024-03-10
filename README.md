@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./public/open-graph.png" width="90%"/>
+<img src="./public/open-graph.png" width="100%"/>
 </div>
 
 ---
