@@ -5,9 +5,67 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mediwhisper.vercel.app/"),
   title: "MediWhisper",
   description:
-    "Get incites to what might be happening to your health before visiting a doctor",
+    "Whispers of what might be ailing you. Get a fair idea of what might be wrong with you before seeing a medical professional",
+    generator: "Next.js",
+    applicationName: "MediWhisper",
+    keywords: [
+        "MediWhisper",
+        "Medical",
+        "AI",
+        "Gemini",
+        "group work",
+        "CSM 395",
+        "medical condition",
+        "medical diagnosis",
+        "medical condition diagnosis",
+        "medical condition diagnosis AI",
+        "medical condition diagnosis AI system",
+        "Medical Help",
+        "Medical AI",
+    ],
+    colorScheme: "dark",
+    openGraph: {
+        title: "MediWhisper",
+        description:
+      "Whispers of what might be ailing you. Get a fair idea of what might be wrong with you before seeing a medical professional",
+        url: "https://mediwhisper.vercel.app/",
+        siteName: "MediWhispers",
+        images: [
+            {
+                url: "/logo.png",
+                width: 1200,
+                height: 630,
+                alt: "MediWhisper Logo",
+            },
+        ],
+        locale: "en-US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "MediWhisper",
+        description:
+      "Whispers of what might be ailing you. Get a fair idea of what might be wrong with you before seeing a medical professional",
+        creator: "Llewellyn Paintsil",
+        images: ["/open-graph.png"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: false,
+            noimageindex: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+    category: "Medical",
 };
 
 export default function RootLayout({
