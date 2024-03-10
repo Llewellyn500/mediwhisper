@@ -93,7 +93,12 @@ const Form = () => {
           className="text-black p-5 mb-5 mr-3 rounded"
         />
 
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          className="bg-[#319EA2] text-white rounded p-3 font-bold"
+        >
+          Submit
+        </button>
       </form>
       <div ref={responseRef}>
         {isLoading ? (
