@@ -107,7 +107,7 @@ const Form = () => {
           response && (
             <>
               <ReactMarkdown children={response} />
-              <p>
+              <p className="mt-2 text-red-500">
                 It is advisable you contact a Medical professional for further
                 enquiries and prescriptions.
               </p>
