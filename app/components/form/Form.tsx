@@ -30,7 +30,7 @@ const Form = () => {
         'Content-Type': 'application/json'
       }
     }
-    const res = await fetch('http://localhost:8000/gemini', options);
+    const res = await fetch('/api/gemini', options);
     const data = await res.text(); 
     console.log(data);
     setResponse(data);
