@@ -1,7 +1,5 @@
 <div align="center">
-<img src="./public/logo-trans.png" width="30%"/>
-<h1>MediWhisper</h1>
-<h2>Whispers of what might be ailing you.</h2>
+<img src="./public/open-graph.png" width="90%"/>
 </div>
 
 ---
