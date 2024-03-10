@@ -4,7 +4,7 @@
 
 ---
 
-This Project is a group work for the course CSM 399 - Introduction to Artificial Intelligence at KNUST. It uses Next.js for the frontend and Node.js for the backend.
+This Project is a group work for the course CSM 395 - Introduction to Artificial Intelligence at KNUST. It uses Next.js for the frontend and Node.js for the backend.
 
 ## Getting Started
 
