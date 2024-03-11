@@ -108,8 +108,7 @@ const Form = () => {
             <>
               <ReactMarkdown children={response} />
               <p className="mt-2 text-red-500">
-                It is advisable you contact a Medical professional for further
-                enquiries and prescriptions.
+                For further assessment and prescription needs, please see a doctor or other healthcare provider.
               </p>
               <button
                 onClick={() => {
