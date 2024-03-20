@@ -24,7 +24,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
-  z-index: 99;
 }
 
 .redacted-script {
@@ -48,11 +47,11 @@ footer {
 
 /* Handle of the scrollbar */
 ::-webkit-scrollbar-thumb {
-  background: rgb(59 130 246);
+  background: #269DA3;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(37 99 235); /* Darker grey on hover */
+  background: #269DA3;
 }

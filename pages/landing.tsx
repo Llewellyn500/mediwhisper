@@ -28,7 +28,7 @@ export default function LandingPage() {
           width={700}
           height={10}
           priority
-          className="absolute right-0"
+          className="relative"
         />
       </main>
       <Footer />
