@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Redacted+Script:wght@300;400;700&display=swap');
+
+* {
+  font-family: "Lato", sans-serif;
+}
+body {
+  background-color: #eaeaea;
+}
+
+nav {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+  font-weight: 500;
+}
+
+footer {
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  z-index: 99;
+}
+
+
+
+.redacted-script {
+  font-family: "Redacted Script", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: rgb(59 130 246);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(37 99 235); /* Darker grey on hover */
+}

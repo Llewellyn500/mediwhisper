@@ -1,83 +1,89 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
+import Head from "next/head";
+import NavBar from "../components/nav/NavBar";
+
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
 import Script from "next/script";
-
-const inter = Inter({ subsets: ["latin"] });
+import { AppProps } from 'next/app';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mediwhisper.vercel.app/"),
-  title: "MediWhisper",
-  description:
-    "Whispers of what might be ailing you. Get a fair idea of what might be wrong with you before seeing a medical professional",
-  generator: "Next.js",
-  applicationName: "MediWhisper",
-  keywords: [
-    "MediWhisper",
-    "Medical",
-    "AI",
-    "Gemini",
-    "group work",
-    "CSM 395",
-    "medical condition",
-    "medical diagnosis",
-    "medical condition diagnosis",
-    "medical condition diagnosis AI",
-    "medical condition diagnosis AI system",
-    "Medical Help",
-    "Medical AI",
-  ],
-  openGraph: {
+    metadataBase: new URL("https://mediwhisper.vercel.app/"),
     title: "MediWhisper",
     description:
       "Whispers of what might be ailing you. Get a fair idea of what might be wrong with you before seeing a medical professional",
-    url: "https://mediwhisper.vercel.app/",
-    siteName: "MediWhispers",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "MediWhisper Logo",
-      },
+    generator: "Next.js",
+    applicationName: "MediWhisper",
+    keywords: [
+      "MediWhisper",
+      "Medical",
+      "AI",
+      "Gemini",
+      "group work",
+      "CSM 395",
+      "medical condition",
+      "medical diagnosis",
+      "medical condition diagnosis",
+      "medical condition diagnosis AI",
+      "medical condition diagnosis AI system",
+      "Medical Help",
+      "Medical AI",
     ],
-    locale: "en-US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "MediWhisper",
-    description:
-      "Whispers of what might be ailing you. Get a fair idea of what might be wrong with you before seeing a medical professional",
-    creator: "Llewellyn Paintsil",
-    images: ["/open-graph.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+    openGraph: {
+      title: "MediWhisper",
+      description:
+        "Whispers of what might be ailing you. Get a fair idea of what might be wrong with you before seeing a medical professional",
+      url: "https://mediwhisper.vercel.app/",
+      siteName: "MediWhispers",
+      images: [
+        {
+          url: "/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "MediWhisper Logo",
+        },
+      ],
+      locale: "en-US",
+      type: "website",
     },
-  },
-  category: "Medical",
-};
+    twitter: {
+      card: "summary_large_image",
+      title: "MediWhisper",
+      description:
+        "Whispers of what might be ailing you. Get a fair idea of what might be wrong with you before seeing a medical professional",
+      creator: "Llewellyn Paintsil",
+      images: ["/open-graph.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: false,
+        noimageindex: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    category: "Medical",
+  };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <html lang="en">
-      <head>
+    <>
+      <Analytics />
+      <SpeedInsights />
+      <Head>
+        <title>MediWhisper</title>
+        <meta
+          name="description"
+          content="Whispers of what might be ailing you."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -151,26 +157,28 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
-      </head>
-      <body className={inter.className}>
-        {children}
-        <Analytics />
-        <SpeedInsights />
+      </Head>
 
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-TX7DV9WGG6`}
-        />
-        <Script id="ga-script" strategy="afterInteractive">
-          {`
+      <div>
+        <NavBar />
+        <Component {...pageProps} />
+        
+      </div>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-TX7DV9WGG6`}
+      />
+      <Script id="ga-script" strategy="afterInteractive">
+        {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-TX7DV9WGG6');
         `}
-        </Script>
-      </body>
-    </html>
+      </Script>
+    </>
   );
 }
+
+export default MyApp;
