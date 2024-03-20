@@ -27,12 +27,12 @@ footer {
   z-index: 99;
 }
 
-
-
 .redacted-script {
-  font-family: "Redacted Script", cursive;
+  font-family: Redacted Script, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
   font-weight: 700;
   font-style: normal;
+  
 }
 
 
