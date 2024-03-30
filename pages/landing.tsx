@@ -22,14 +22,6 @@ export default function LandingPage() {
             Start Program
           </button>
         </Link>
-        <Image
-          src="/heart2.webp"
-          alt="Heart"
-          width={700}
-          height={10}
-          priority
-          className="relative"
-        />
       </main>
       <Footer />
     </>
