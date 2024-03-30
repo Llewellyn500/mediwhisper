@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import NavBar from "../components/nav/NavBar";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -160,7 +159,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div>
-        <NavBar />
         <Component {...pageProps} />
         
       </div>

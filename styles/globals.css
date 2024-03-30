@@ -1,18 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redacted+Script:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Redacted+Script:wght@300;400;700&display=swap');
-
-* {
-  font-family: "Lato", sans-serif;
-}
 body {
+  @apply leading-[normal] m-0;
+}
+/* 
+.landing-page {
   background-image: url(/bg.webp);
   background-repeat: no-repeat;
   background-position-x: center;
-  /* background-size: cover; */
+  background-size: cover;
   background-color: #eaeaea;
+}
+
+.prediction-page {
+  background-color: #eaeaea;
+  background-image: none;
 }
 
 nav {
@@ -31,13 +37,17 @@ footer {
 }
 
 .redacted-script {
-  font-family: Redacted Script, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
+  font-family: Redacted Script, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
-  
-}
+} */
 
+*,
+::before,
+::after {
+  border-width: 0;
+}
 
 /* Width of the scrollbar */
 ::-webkit-scrollbar {
@@ -51,11 +61,11 @@ footer {
 
 /* Handle of the scrollbar */
 ::-webkit-scrollbar-thumb {
-  background: #269DA3;
+  background: #269da3;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #269DA3;
+  background: #269da3;
 }
