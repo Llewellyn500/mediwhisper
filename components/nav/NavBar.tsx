@@ -4,8 +4,7 @@ import Link from "next/link";
 
 function NavBar() {
   return (
-    <nav className="w-[74.313rem] h-[3rem] flex flex-row items-start justify-start py-[0rem] px-[1.625rem] box-border max-w-full text-left text-[1.25rem] text-black font-lato mx-auto">
-      <div className="self-stretch flex-1 flex flex-row items-start justify-between max-w-full gap-[1.25rem]">
+    <nav className="w-[76.5rem] h-[3rem] flex flex-row items-start justify-between gap-[1.25rem] max-w-full text-left text-[1.25rem] text-black font-lato">
         <Link href="/landing">
           <Image
             src="/logo-trans.png"
@@ -16,7 +15,6 @@ function NavBar() {
             className="h-[3rem] w-[3rem] relative object-cover"
           />
         </Link>
-      </div>
       <div className="flex flex-col items-start justify-start pt-[0.75rem] px-[0rem] pb-[0rem]">
         <div className="relative font-extrabold whitespace-pre-wrap shrink-0 cursor-pointer">
           <a href="#" rel="noopener noreferrer" className="pr-3">
