@@ -21,7 +21,7 @@ body {
 
 /* Track of the scrollbar */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #EAEAEA;
 }
 
 /* Handle of the scrollbar */
